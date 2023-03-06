@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          AI Image Generator
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      
+      <div class="nav-links">
+        <a href="https://github.com/labyh123456" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/saad-khan-539844204/" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/tommmyy890" target="_blank">Twitter</a>
+        <a href="http://stackoverflow.com" target="_blank">Stackoverflow</a>
+  
+      </div>
+    </div>
+    <main id="app">
+      <div id="result">
+
+      </div>
+
+      <form> 
+        <label for="prompt">Prompt</label>
+        <textarea name="prompt" maxlength="160"></textarea>
+        <button type="submit">Dream</button>
+      </form>
+
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
