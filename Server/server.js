@@ -1,12 +1,10 @@
 import * as dotenv from "dotenv";
-if (process.env.NODE_ENV !== "production") {
-  dotenv.config();
-}
+dotenv.config();
 import { Configuration, OpenAIApi } from "openai";
 
-const port = process.env.PORT || 8080;
+console.log(process.env.OPENAI_API_KEY);
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_KEY,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
@@ -41,6 +39,4 @@ app.post("/dream", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Listning on the port at ${port}`);
-});
+app.listen(8080, () => console.log("Make art on http://localhost:8080/drem"));
