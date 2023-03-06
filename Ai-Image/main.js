@@ -6,15 +6,18 @@ form.addEventListener("submit", async (e) => {
   showSpinner();
   const data = new FormData(form);
 
-  const response = await fetch("http://localhost:8080/dream", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      prompt: data.get("prompt"),
-    }),
-  });
+  const response = await fetch(
+    "https://ai-image-generator-delta.vercel.app/dream",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt: data.get("prompt"),
+      }),
+    }
+  );
   if (response.ok) {
     const { image } = await response.json();
     const result = document.querySelector("#result");
